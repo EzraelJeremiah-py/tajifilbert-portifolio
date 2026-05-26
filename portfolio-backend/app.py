@@ -6,7 +6,7 @@ CORS(app)
 
 portfolio = {
     "name": "Taji Filbert",
-    "about": "Data analytics and insights.",
+    "about": "Data scientist specialized in analytics, visualization and insights.",
     "skills": ["R Programming Language", "Python Programming", "Excel", "Power BI"],
     "qualifications": ["BSc in Computer Science", "Data Analysis & Visualization"],
     "projects": [
