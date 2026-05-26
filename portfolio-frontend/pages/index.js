@@ -19,7 +19,7 @@ export default function Home() {
     <header className="bg-dark text-white text-center py-5 mb-4" 
     style={{ backgroundImage: "url('https://source.unsplash.com/1600x400/?technology,data')", 
            backgroundSize: "cover", backgroundPosition: "center" }}>
-  <div className="bg-dark bg-opacity-75 p-4 rounded">
+  <div className="bg-cyan bg-opacity-75 p-4 rounded">
   <h1 className="display-4">{portfolio.name}</h1>
   <p className="lead">{portfolio.about}</p>
   </div>
