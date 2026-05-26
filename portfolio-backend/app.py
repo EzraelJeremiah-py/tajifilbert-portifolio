@@ -5,6 +5,8 @@ app = Flask(__name__)
 CORS(app)
 
 portfolio = {
+    "name": "Taji Filbert",
+    "about": "Data analytics and insights.",
     "skills": ["R Programming Language", "Python Programming", "Excel", "Power BI"],
     "qualifications": ["BSc in Computer Science", "Data Analysis & Visualization"],
     "projects": [
