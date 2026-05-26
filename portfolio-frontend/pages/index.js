@@ -16,11 +16,22 @@ export default function Home() {
   return (
     <div>
   {/* Header */}
-    <header className="bg-dark text-white text-center py-5 mb-4" 
-    style={{ backgroundImage: "url('https://source.unsplash.com/1600x400/?technology,data')", 
-           backgroundSize: "cover", backgroundPosition: "center" }}>
-  <div className="bg-dark bg-opacity-75 p-4 rounded">
-  <h1 className="display-4">{portfolio.name}</h1>
+    <header
+    className="text-white text-center py-5 mb-4"
+      style={{
+        backgroundImage: "url('https://source.unsplash.com/1600x400/?software,developer,technology')",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}
+>
+{/* Gradient overlay */}
+<div
+  className="p-4 rounded"
+    style={{
+      background: "linear-gradient(135deg, rgba(0,123,255,0.85), rgba(0,200,150,0.85))"
+    }}
+>
+  <h1 className="display-4 fw-bold">{portfolio.name}</h1>
   <p className="lead">{portfolio.about}</p>
   </div>
   </header>
