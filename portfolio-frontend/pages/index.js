@@ -14,8 +14,16 @@ export default function Home() {
   if (!portfolio) return <p className="text-center mt-5">Loading portfolio...</p>;
 
   return (
-    <div className="container mt-5">
-      <h1 className="text-primary mb-4 text-center">My Professional Portfolio</h1>
+    <div>
+  {/* Header */}
+    <header className="bg-dark text-white text-center py-5 mb-4" 
+    style={{ backgroundImage: "url('https://source.unsplash.com/1600x400/?technology,data')", 
+           backgroundSize: "cover", backgroundPosition: "center" }}>
+  <div className="bg-dark bg-opacity-75 p-4 rounded">
+  <h1 className="display-4">{portfolio.name}</h1>
+  <p className="lead">{portfolio.about}</p>
+  </div>
+  </header>
 
       {/* Skills */}
       <section className="mb-4">
