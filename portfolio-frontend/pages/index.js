@@ -1,16 +1,30 @@
-return (
-  <div>
-    {/* Header */}
-    <header className="bg-dark text-white text-center py-5 mb-4" 
-            style={{ backgroundImage: "url('https://source.unsplash.com/1600x400/?technology,data')", 
-                     backgroundSize: "cover", backgroundPosition: "center" }}>
-      <div className="bg-dark bg-opacity-75 p-4 rounded">
-        <h1 className="display-4">{portfolio.name}</h1>
-        <p className="lead">{portfolio.about}</p>
-      </div>
-    </header>
+import React, { useEffect, useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-    <div className="container mt-5">
+export default function Home() {
+  const [portfolio, setPortfolio] = useState(null);
+
+  useEffect(() => {
+    fetch("https://tajifilbert-portifolio.onrender.com/api/portfolio")
+      .then(res => res.json())
+      .then(data => setPortfolio(data))
+      .catch(err => console.error("Error fetching portfolio:", err));
+  }, []);
+
+  if (!portfolio) return <p className="text-center mt-5">Loading portfolio...</p>;
+
+  return (
+    <div>
+  {/* Header */}
+    <header className="bg-dark text-white text-center py-5 mb-4" 
+    style={{ backgroundImage: "url('https://source.unsplash.com/1600x400/?technology,data')", 
+           backgroundSize: "cover", backgroundPosition: "center" }}>
+  <div className="bg-dark bg-opacity-75 p-4 rounded">
+  <h1 className="display-4">{portfolio.name}</h1>
+  <p className="lead">{portfolio.about}</p>
+  </div>
+  </header>
+
       {/* Skills */}
       <section className="mb-4">
         <h3>Skills</h3>
@@ -52,6 +66,9 @@ return (
         <p>📞 {portfolio.contact.phone}</p>
         <p>📧 {portfolio.contact.email}</p>
       </section>
+    </div>
+  );
+} 
     </div>
   </div>
 );
